@@ -1,0 +1,70 @@
+{
+  "title": "Gemini Speech",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Gemini Speech",
+        "description": "Enter your Gemini API key. After saving, use Add voice profile to create a TTS entity.",
+        "data": {
+          "api_key": "API key"
+        }
+      },
+      "reconfigure": {
+        "title": "Change API key",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The API key was rejected.",
+      "cannot_connect": "Unable to connect to Gemini. Please try again."
+    },
+    "abort": {
+      "already_configured": "This API key is already configured.",
+      "reconfigure_successful": "API key updated."
+    }
+  },
+  "config_subentries": {
+    "tts": {
+      "entry_type": "Voice profile",
+      "initiate_flow": {
+        "user": "Add voice profile",
+        "reconfigure": "Reconfigure voice profile"
+      },
+      "step": {
+        "user": {
+          "title": "New voice profile",
+          "data": {
+            "name": "Name",
+            "model": "Model",
+            "voice": "Voice",
+            "style": "Default style direction"
+          },
+          "data_description": {
+            "model": "Choose a model or enter a custom model ID.",
+            "voice": "Choose a catalog voice or enter a custom voice ID.",
+            "style": "For example: warm, dry and conversational. Leave empty for no style direction."
+          }
+        },
+        "reconfigure": {
+          "title": "Edit voice profile",
+          "data": {
+            "name": "Name",
+            "model": "Model",
+            "voice": "Voice",
+            "style": "Default style direction"
+          },
+          "data_description": {
+            "model": "Choose a model or enter a custom model ID.",
+            "voice": "Choose a catalog voice or enter a custom voice ID.",
+            "style": "For example: warm, dry and conversational. Leave empty for no style direction."
+          }
+        }
+      },
+      "abort": {
+        "reconfigure_successful": "Voice profile updated."
+      }
+    }
+  }
+}

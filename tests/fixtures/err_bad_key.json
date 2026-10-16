@@ -1,0 +1,51 @@
+{
+ "request": {
+  "model": "gemini-3.8-flash-tts",
+  "input": [
+   {
+    "type": "user_input",
+    "content": [
+     {
+      "type": "text",
+      "text": "Hello."
+     }
+    ]
+   }
+  ],
+  "response_format": {
+   "type": "audio"
+  },
+  "generation_config": {
+   "speech_config": [
+    {
+     "voice": "Kore"
+    }
+   ]
+  }
+ },
+ "status": 400,
+ "response": [
+  {
+   "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+     {
+      "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+      "reason": "API_KEY_INVALID",
+      "domain": "googleapis.com",
+      "metadata": {
+       "service": "generativelanguage.googleapis.com"
+      }
+     },
+     {
+      "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+      "locale": "en-US",
+      "message": "API key not valid. Please pass a valid API key."
+     }
+    ]
+   }
+  }
+ ]
+}

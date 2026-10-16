@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.codex_*
+.ruff_cache/
+NOTES_FOR_REVIEW.md
+docs/

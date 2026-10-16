@@ -1,0 +1,33 @@
+{
+ "request": {
+  "model": "gemini-3.8-flash-tts",
+  "input": [
+   {
+    "type": "user_input",
+    "content": [
+     {
+      "type": "text",
+      "text": "Hello."
+     }
+    ]
+   }
+  ],
+  "response_format": {
+   "type": "audio"
+  },
+  "generation_config": {
+   "speech_config": [
+    {
+     "voice": "Nope"
+    }
+   ]
+  }
+ },
+ "status": 400,
+ "response": {
+  "error": {
+   "message": "No matching speaker voice found for name: Nope and language: ",
+   "code": "invalid_request"
+  }
+ }
+}

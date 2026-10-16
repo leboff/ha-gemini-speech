@@ -1,0 +1,33 @@
+{
+ "request": {
+  "model": "gemini-0-nope-tts",
+  "input": [
+   {
+    "type": "user_input",
+    "content": [
+     {
+      "type": "text",
+      "text": "Hello."
+     }
+    ]
+   }
+  ],
+  "response_format": {
+   "type": "audio"
+  },
+  "generation_config": {
+   "speech_config": [
+    {
+     "voice": "Kore"
+    }
+   ]
+  }
+ },
+ "status": 404,
+ "response": {
+  "error": {
+   "message": "Model 'gemini-0-nope-tts' not found. Did you mean 'gemini-3.8-flash-tts'? Please verify the model name against the supported list: https://ai.google.dev/gemini-api/docs/models",
+   "code": "not_found"
+  }
+ }
+}
